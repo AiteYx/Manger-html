@@ -136,10 +136,150 @@
         <!--页面内容-->
         <div class="content-inner">
           <!-- 头部 -->
-
-
+          
           <!--填写内容-->
-          <section class="forms"> 
+          <section class="charts" style="padding: 50px 0px 0px 0px">
+            <div class="container-fluid">
+              <div class="row">
+
+                <!-- Pie Chart -->
+                <div class="col-lg-4">
+                  <div class="pie-chart-example card">
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">本学期考勤</h3>
+                    </div>
+                    <div class="card-body">
+                      <canvas id="pieChartExample1"></canvas>
+                      
+                      <script type="text/javascript">
+                        var PIECHARTEXMPLE    = $('#pieChartExample1');
+                        var pieChartExample = new Chart(PIECHARTEXMPLE, {
+                            type: 'pie',
+                            data: {
+                                labels: [
+                                    "缺勤",
+                                    "请假",
+                                    "迟到"
+                                ],
+                                datasets: [
+                                    {
+                                        data: [3, 2, 1],
+                                        borderWidth: 0,
+                                        backgroundColor: [
+                                            '#44b2d7',
+                                            "#59c2e6",
+                                            "#71d1f2",
+                                            "#96e5ff"
+                                        ],
+                                        hoverBackgroundColor: [
+                                            '#44b2d7',
+                                            "#59c2e6",
+                                            "#71d1f2",
+                                            "#96e5ff"
+                                        ]
+                                    }]
+                                }
+                        });
+                      </script>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Doughnut Chart -->
+                <div class="col-lg-4">
+                  <div class="pie-chart-example card">
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">班级最近消费</h3>
+                    </div>
+                    <div class="card-body">
+                      <canvas id="doughnutChartExample1"></canvas>
+                      
+                      <script type="text/javascript">
+                        var DOUGHNUTCHARTEXMPLE  = $('#doughnutChartExample1');
+                        var pieChartExample = new Chart(DOUGHNUTCHARTEXMPLE, {
+                            type: 'doughnut',
+                            options: {
+                                cutoutPercentage: 70,
+                            },
+                            data: {
+                                labels: [
+                                    "2019-11-6",
+                                    "2019-11-6",
+                                    "2019-11-6",
+                                ],
+                                datasets: [
+                                    {
+                                        data: [50, 100, 40],
+                                        borderWidth: 0,
+                                        backgroundColor: [
+                                            '#3eb579',
+                                            '#49cd8b',
+                                            "#54e69d",
+                                            "#71e9ad"
+                                        ],
+                                        hoverBackgroundColor: [
+                                            '#3eb579',
+                                            '#49cd8b',
+                                            "#54e69d",
+                                            "#71e9ad"
+                                        ]
+                                    }]
+                                }
+                        });
+
+                        var pieChartExample = {
+                            responsive: true
+                        };
+                      </script>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Radar Chart-->
+                <div class="col-lg-4">
+                  <div class="radar-chart-example card">
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">最近大考成绩</h3>
+                    </div>
+                    <div class="card-body">
+                      <canvas id="radarChartExample1"></canvas>
+                      
+                      <script type="text/javascript">
+                        var RADARCHARTEXMPLE  = $('#radarChartExample1');
+                        var radarChartExample = new Chart(RADARCHARTEXMPLE, {
+                            type: 'radar',
+                            data: {
+                                labels: ["数学", "物理", "英语", "体育", "生物", "化学"],
+                                datasets: [
+                                    {
+                                        label: "成绩分布",
+                                        backgroundColor: "rgba(84, 230, 157, 0.4)",
+                                        borderWidth: 1,
+                                        borderColor: "rgba(75, 204, 140, 1)",
+                                        pointBackgroundColor: "rgba(75, 204, 140, 1)",
+                                        pointBorderColor: "#fff",
+                                        pointHoverBackgroundColor: "#fff",
+                                        pointHoverBorderColor: "rgba(75, 204, 140, 1)",
+                                        data: [65, 59, 90, 81, 56, 55]
+                                    }
+                                ]
+                            }
+                        });
+                        var radarChartExample = {
+                            responsive: true
+                        };
+                      </script>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </section>
+
+          <section class="forms" style="padding: 0px 0px"> 
             <div class="container-fluid">
               <div class="row">
                 <div class="col-lg-12">
